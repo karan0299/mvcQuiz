@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+            <div id="upper">
+                    <img>
+                    <h1>This is the best quizing platform</h1>
+                </div>
+        <nav id="options">
+            <a href="/" class="links">Home</a>
+            <a href="/admin" class="links">Adminpage</a>
+            <a href="/addques" class="links">AddQues</a>
+            <a href="/addadmin" class="links">Addadmin</a>
+            <a href="/deleteuser" class="links">DeleteUser</a>  <!-- Controller Still not added-->
+        </nav>
+        <form action="/editques/{{ques.number}}" method="POST" >
+            <textarea id="ques" name="ques">{{ques.statement}}</textarea>
+            <textarea id="ans"  name="answer">{{ques.answer}}</textarea>
+            <textarea id="comment"  name="comment">{{ques.comment}}</textarea>
+            <textarea id="points"  name="points">{{ques.points}}</textarea>
+            <input type="submit" name="submit">
+        </form>
+        <div class="error">{{error}}</div>
+        <footer id="footer">
+            <div id="footerdiv">
+                <p>For queries contact</p>
+                <span class="contact">Phone NO.</span><span>XXXXXXXXXX</span><br>
+                <span class="contact">Email</span><span>karansingh0299@gmail.com</span>
+            </div>
+        </footer>
+    </body>
+</html>

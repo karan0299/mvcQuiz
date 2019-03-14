@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="/css/login.css">
+    </head>
+    <body>
+            <div id="upper">
+                <img>
+                <h1>This is the best quizing platform</h1>
+            </div>
+            <nav id="options">
+                <a href="/"  class="links">Home</a> 
+                <a href="/signup"  class="links">Signup</a>
+                <a href="/leaderboard"  class="links">leaderboard</a>
+                <a href="/adminlogin"   id="#admin">Login as Admin</a>
+            </nav>
+            <div class="form">
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="username" autocomplete="off" autofocus>
+                <input type="password" name="password" placeholder="password" autocomplete="off">
+                <button type="submit">login</button>
+                <p class="message">Not Registered?<a href="/signup">Register</a></p>
+                <p class="error">{{error}}</p>
+            </form>
+            </div>
+            <footer id="footer">
+                    <div id="footerdiv">
+                        <p>For queries contact</p>
+                        <span class="contact">Phone NO.</span><span>XXXXXXXXXX</span><br>
+                        <span class="contact">Email</span><span>karansingh0299@gmail.com</span>
+                    </div>
+            </footer>
+    </body>
+</html>

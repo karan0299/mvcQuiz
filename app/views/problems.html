@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="/css/problems.css">
+    </head>
+    <body>
+        <div id="upper">
+            <img>
+            <h1>This is the best quizing platform</h1>
+        </div>
+        <nav id="options">
+            <a href="/"  class="links">Home</a>
+            <a href="/logout"  class="links">Logout</a>
+            <a href="/leaderboard"  class="links">leaderboard</a>
+            <a href="/adminlogin"   id="#admin">Login as Admin</a>
+        </nav>
+        <div class="ques_container">
+        {% for ques in queslist %}
+        <section class="ques">
+            <a href="/problems/{{ques.number}}" class="quesno">{{ques.number}}<span>{{ques.comment}}</span></a>
+        </section>
+        {% endfor %}
+        </div>
+
+        <footer id="footer">
+            <div id="footerdiv">
+                <p>For queries contact</p>
+                <span class="contact">Phone NO.</span><span>XXXXXXXXXX</span><br>
+                <span class="contact">Email</span><span>karansingh0299@gmail.com</span>
+            </div>
+        </footer>
+    </body>
+</html>

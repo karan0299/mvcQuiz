@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/css/question.css">
+    </head>
+    <body>
+        <div id="upper">
+            <img>
+            <h1>This is the best quizing platform</h1>
+        </div>
+        <nav id="options">
+            <a href="/"  class="links">Home</a>
+            <a href="/logout"  class="links">Logout</a>
+            <a href="/leaderboard"  class="links">leaderboard</a>
+            <a href="/adminlogin"   id="#admin">Login as Admin</a>
+        </nav>
+
+        <div class="form">
+        <div id="title">{{ques.number}}  {{ques.comment}}</div>
+        <div id="ques">{{ques.statement}}</div>
+        <p>contributed by {{ques.creator}}</p>
+        <p>solved by {{ques.no_of_users}} no. of users</p>
+        <p id="error">{{error1}}</p>
+        <form action="/problems/{{ques.number}}" method="POST" >
+        <input type="text" name="answer" placeholder="Type answer here">
+        <input type="submit" name="submit">
+        </form>
+        </div>
+
+        <p id="error">{{error}}</p>
+        <footer id="footer">
+            <div id="footerdiv">
+                <p>For queries contact</p>
+                <span class="contact">Phone NO.</span><span>XXXXXXXXXX</span><br>
+                <span class="contact">Email</span><span>karansingh0299@gmail.com</span>
+            </div>
+            </footer>
+         </body>
+</html>

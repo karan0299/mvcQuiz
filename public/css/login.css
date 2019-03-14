@@ -1,0 +1,57 @@
+
+
+.form{
+	position: relative;
+    z-index: 1;  
+	background:#6497b1;
+	max-width: 360px;
+	margin: 20vh auto 100px;
+	padding: 45px;
+	text-align: center;
+}
+
+.form input{
+	outline: 1;
+	background:#f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 2vw;
+ 
+}
+
+.form button{
+	text-transform: uppercase;
+	outline: 0;
+	background:#005b96 	;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #ffffff;
+	font-size: 14px;
+
+}
+
+.form button:hover,.form button:active{
+	background: #03396c 	
+
+}
+.form .message{
+	margin:15px 0 0 ;
+	color: white;
+	font-size: 12px;
+}
+
+.form .message a{
+	color: #011f4b ;
+	text-decoration: none;
+
+}
+
+.form .error{
+	margin:15px 0 0;
+	color: red;
+	font-size: 12px;
+}

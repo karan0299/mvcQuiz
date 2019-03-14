@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <div id="upper">
+            <img>
+            <h1>This is the best quizing platform</h1>
+        </div>
+        <nav id="options">
+            <a href="/" class="links">Home</a>
+            <a href="/admin" class="links">Adminpage</a>
+            <a href="/addques" class="links">AddQues</a>
+            <a href="/addadmin" class="links">Addadmin</a>
+            <a href="/logout" class="links">Logout</a>  <!-- Controller Still not added-->
+        </nav>
+        {% for ques in queslist %}
+        <section class="ques">
+            <a href="/editques/{{ques.number}}" class="quesno">{{ques.number}}<span>{{ques.comment}}</span></a>
+        </section>
+        {% endfor %}
+    </body>
+
+</html>

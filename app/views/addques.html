@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <div id="upper">
+            <img>
+            <h1>This is the best quizing platform</h1>
+        </div>
+        {% if admin==true %}
+        <nav id="options">
+            <a href="/" class="links">Home</a>
+            <a href="/admin" class="links">Adminpage</a>
+            <a href="/editques" class="links">EditQues</a>
+            <a href="/addadmin" class="links">Addadmin</a>
+            <a href="/logout" class="links">Logout</a>  <!-- Controller Still not added-->
+        </nav>
+        <form action="/addques" method="POST" id="#addquesform">
+           <textarea name="ques" placeholder="Type ques here" >{{ques}}</textarea><br>
+           <input type="text" name="answer" placeholder="answer" value={{answer}}><br>
+           <input type="number" name="points" placeholder="Points it carries" value={{points}}><br>
+           <textarea name="comment" placeholder ="Add short comment related to question">{{comment}}</textarea><br>
+           <input type="submit" name="submit"><br>
+        </form>
+        <div id="error">{{error1}}</div>
+        {% else %}
+        <div id="error">{{error}}</div>
+        {% endif %}
+        <footer id="footer">
+            <div id="footerdiv">
+                <p>For queries contact</p>
+                <span class="contact">Phone NO.</span><span>XXXXXXXXXX</span><br>
+                <span class="contact">Email</span><span>karansingh0299@gmail.com</span>
+            </div>
+            </footer>
+    </body>
+</html>

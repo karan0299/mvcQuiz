@@ -1,0 +1,23 @@
+.ques_container{
+    position: relative;
+	width: 70vw;
+	height: 60vh;
+	margin: 15vh auto 0;
+	position: relative;
+	background:#6497b1;
+    padding: 3vw;
+    
+	text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.ques {
+	width:60vw;
+    margin: auto;
+    text-align: center;
+	font-size: 1.5vw;
+	padding: 1.8vh;
+	border: 0.4vw solid #011f4b;
+}

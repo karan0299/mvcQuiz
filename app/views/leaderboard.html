@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="/css/leaderboard.css">
+    </head>
+    <body>
+        <div id="upper">
+            <img id="mainimg">
+            <h1>This is the best quizing platform</h1>
+        </div>
+                <nav id="#options">
+                {% if user == false %}  
+                <a href="/login" class="links">Login</a>
+                <a href="/signup"  class="links">Signup</a>
+                {% else %}
+                <a href="/logout"  class="links">Logout</a>
+                {% endif %}
+                <a href="/"  class="links">Home</a>
+                <a href="/adminlogin"  id="#admin">Login as Admin</a>
+                <a href="/problems">Attempt questions</a>
+                 </nav>
+        <div class="table_container">
+		    <table id="table">
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                </tr>
+                {% for user in userlist %}
+                <tr>
+                    <td>{{user.rank}}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.score }}</td>
+                </tr>
+                {% endfor %}
+            </table> 
+      </div>
+    <footer id="footer">
+            <div id="footerdiv">
+                <p>For queries contact</p>
+                <span class="contact">Phone NO.</span><span>XXXXXXXXXX</span><br>
+                <span class="contact">Email</span><span>karansingh0299@gmail.com</span>
+            </div>
+        </footer>
+    </body>
+</html>

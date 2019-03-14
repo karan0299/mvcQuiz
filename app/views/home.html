@@ -1,0 +1,46 @@
+
+<!Doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+    <body>
+        <div id="upper">
+            <img>
+            <h1>This is the best quizing platform</h1>
+        </div>
+        <nav id="options">
+        {% if user == false %}  
+        <a href="/login" class="links">Login</a>
+        <a href="/signup"  class="links">Signup</a>
+        {% else %}
+        <a href="/logout"  class="links">Logout</a>
+        {% endif %}
+        <a href="/leaderboard"  class="links">leaderboard</a>
+        <a href="/adminlogin"   id="admin">Login as Admin</a>
+        <a href="/problems">Attempt questions</a>
+        </nav>
+        <div class="profile">
+        <p>Warning: You cannot attempt questions unless you are logged in</p>
+        <section>
+           {% if user == true %}  
+           <div class="welcome">Welcome {{username}}</div>
+           <div class="score"> <span>Score</span><span>{{score}}</span></div>
+           <div class="score"><span>Attempted Ques</span><span>{{attempted}}</span></div>
+           
+           {% else %}
+           <div>Still not logged in?!!</div>
+           {% endif %}
+        </section>
+        </div>
+        <footer id="footer">
+            <div id="footerdiv">
+                <p>For queries contact</p>
+                <span class="contact">Phone NO.</span><span>XXXXXXXXXX</span><br>
+                <span class="contact">Email</span><span>karansingh0299@gmail.com</span>
+            </div>
+        </footer>
+        </body>
+</html>
